@@ -43,9 +43,9 @@ test('selectable dates exclude Sundays and the past', () => {
 });
 
 test('patient validation', () => {
-  assert.ok(isPatientValid({ name: 'An', phone: '0912 345 678', email: '' }));
-  assert.ok(isPatientValid({ name: 'An', phone: '+84912345678', email: 'a@b.vn' }));
-  assert.deepEqual(validatePatient({ name: ' ', phone: '123', email: 'x' }), { name: 'name', phone: 'phone', email: 'email' });
+  assert.ok(isPatientValid({ name: 'An', phone: '0912 345 678', email: '', note: 'Đau răng' }));
+  assert.ok(isPatientValid({ name: 'An', phone: '+84912345678', email: 'a@b.vn', note: 'Checkup' }));
+  assert.deepEqual(validatePatient({ name: ' ', phone: '123', email: 'x', note: '  ' }), { name: 'name', phone: 'phone', email: 'email', note: 'note' });
 });
 
 test('helpers and formatting', () => {

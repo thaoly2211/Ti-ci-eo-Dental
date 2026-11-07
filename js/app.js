@@ -181,12 +181,14 @@ function field(id, labelKey, phKey, type = 'text', extra = '') {
 }
 
 function renderForm() {
+  const noteErr = state.tried && validatePatient(state.patient).note ? t('err.note') : '';
   return `<form class="form animate" data-form novalidate>
     <div class="form__full" id="details-ok">${isPatientValid(state.patient) ? okBanner('details.ok') : ''}</div>
     ${field('name', 'field.name', 'ph.name')}${field('phone', 'field.phone', 'ph.phone', 'tel')}
     ${field('email', 'field.email', 'ph.email', 'email', 'form__full')}
     <div class="field form__full"><label for="f-note">${t('field.note')}</label>
-      <textarea class="textarea" id="f-note" data-field="note" data-focus-id="f-note" rows="4" placeholder="${t('ph.note')}">${esc(state.patient.note)}</textarea></div></form>`;
+      <textarea class="textarea" id="f-note" data-field="note" data-focus-id="f-note" rows="4" placeholder="${t('ph.note')}" ${noteErr ? 'aria-invalid="true"' : ''} aria-describedby="e-note">${esc(state.patient.note)}</textarea>
+      <span class="field__error" id="e-note">${esc(noteErr)}</span></div></form>`;
 }
 
 /* Step 5 · summary */
@@ -325,7 +327,7 @@ document.addEventListener('input', (e) => {
   if (ok && !!ok.firstChild !== valid) ok.innerHTML = valid ? okBanner('details.ok') : '';
   if (!state.tried) return;
   const errs = validatePatient(state.patient);
-  for (const f of ['name', 'phone', 'email']) {
+  for (const f of ['name', 'phone', 'email', 'note']) {
     const input = document.getElementById(`f-${f}`);
     const msg = document.getElementById(`e-${f}`);
     if (!input || !msg) continue;

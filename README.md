@@ -26,7 +26,7 @@ Tham số URL hữu ích:
 1. **Chọn ngày**: lịch tháng (bắt đầu từ Thứ Hai), khóa ngày đã qua, Chủ nhật và ngày kín lịch. Thẻ ngày lớn và giờ làm việc ở bên phải.
 2. **Chọn giờ**: khung 30 phút chia Buổi sáng / Buổi chiều, chỉ hiện giờ còn ít nhất một bác sĩ trống.
 3. **Chọn bác sĩ**: chỉ hiện bác sĩ trống ở giờ đã chọn.
-4. **Thông tin bệnh nhân**: họ tên, số điện thoại VN (bắt buộc), email, ghi chú. Lỗi hiện sau lần bấm "Tiếp tục" đầu tiên.
+4. **Thông tin bệnh nhân**: họ tên, số điện thoại VN và ghi chú cho bác sĩ (bắt buộc), email (không bắt buộc). Lỗi hiện sau lần bấm "Tiếp tục" đầu tiên.
 5. **Tóm tắt**: mỗi mục có nút "Sửa" để quay lại đúng bước.
 6. **Xác nhận**: tick đồng ý, rồi hiện phiếu hẹn với mã tham chiếu `TC-DDMM-XXXX`.
 

@@ -168,7 +168,7 @@ h1, h2, h3, p { margin: 0; }
 .input, .textarea { width: 100%; padding: 0 26px; border: 1.5px solid var(--color-border-strong); border-radius: var(--radius-pill); background: var(--color-surface); font-size: 20px; }
 .input { height: 60px; }
 .textarea { padding: 18px 26px; border-radius: var(--radius-card); line-height: 30px; resize: none; }
-.input[aria-invalid="true"] { border-color: var(--color-danger); }
+.input[aria-invalid="true"], .textarea[aria-invalid="true"] { border-color: var(--color-danger); }
 .field__error { color: var(--color-danger); }
 
 /* ---------- Step 5: summary ---------- */
