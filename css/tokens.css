@@ -1,0 +1,82 @@
+/* Design tokens: ocean cyan. Primary brand color is #22B8CF.
+   Rule: never hard-code colors, radii or font sizes in components. Use these variables. */
+:root {
+  /* Brand scale (400 = primary) */
+  --color-primary-50: #e6fafd;
+  --color-primary-100: #c5f1f8;
+  --color-primary-200: #94e3f0;
+  --color-primary-300: #5fd0e3;
+  --color-primary-400: #22b8cf;
+  --color-primary-500: #1299b0;
+  --color-primary-600: #0e7b8f;
+  --color-primary-700: #0d6274;
+  --color-primary-800: #0d4e5d;
+  --color-primary-900: #0c3a47;
+  --color-primary-950: #072630;
+
+  --color-primary: var(--color-primary-400);
+  --color-primary-hover: var(--color-primary-500);
+  --color-on-primary: #06283d; /* text on primary fills (white fails contrast) */
+  --color-link: var(--color-primary-700);
+
+  /* Neutrals */
+  --color-ink: #0b2236;
+  --color-ink-soft: #2e4559;
+  --color-muted: #4a6378;
+  --color-divider: #e3edf4;
+  --color-border: #d5e3ee;
+  --color-border-strong: #6f8da3;
+  --color-bg: #eaf7f9;
+  --color-bg-soft: #f4f9fc;
+  --color-surface: #ffffff;
+  --color-disabled-bg: #eef3f7;
+  --color-disabled-text: #8ca1b0;
+
+  /* Status */
+  --color-danger: #b42318;
+  --color-danger-bg: #fdecea;
+  --color-danger-border: #f1b0a8;
+  --color-danger-text: #8f1b11;
+  --color-success-bg: #e7f7ef;
+  --color-success-border: #9ed8bd;
+  --color-success-text: #0f5c41;
+
+  /* Radius (max 50px) */
+  --radius-card: 32px;
+  --radius-panel: 40px;
+  --radius-box: 28px;
+  --radius-pill: 50px;
+
+  /* Typography: base 18px, never smaller */
+  --font-family: "Be Vietnam Pro", system-ui, sans-serif;
+  --fs-base: 18px;
+  --fs-lg: 22px;
+  --fs-xl: 26px;
+  --fs-h2: 36px;
+  --fs-h1: 40px;
+  --fs-display: 120px;
+  --lh-base: 28px;
+
+  /* Spacing (4px grid) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(6, 31, 51, 0.08), 0 1px 3px rgba(6, 31, 51, 0.06);
+  --shadow-md: 0 4px 12px rgba(6, 31, 51, 0.1);
+  --shadow-lg: 0 16px 32px rgba(6, 31, 51, 0.16);
+  --shadow-card: 0 16px 32px rgba(6, 31, 51, 0.1);
+  --shadow-slip: 0 16px 32px rgba(6, 31, 51, 0.12);
+
+  /* Sidebar (dark teal) */
+  --sidebar-bg: var(--color-primary-950);
+  --sidebar-text: #ffffff;
+  --sidebar-muted: var(--color-primary-200);
+}
